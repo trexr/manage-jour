@@ -1,4 +1,4 @@
-import firebase from "firebase/apps";
+import firebase from "firebase";
 import "firebase/firestore";
 import "firebase/auth";
 
@@ -13,6 +13,6 @@ const firebaseConfig = {
   measurementId: "G-XN461FCL3B"
 };
 firebase.initializeApp(firebaseConfig);
-firebase.forestore().settings({ timestampsInSnapshot: true });
+firebase.firestore().settings({});
 
 export default firebase;
