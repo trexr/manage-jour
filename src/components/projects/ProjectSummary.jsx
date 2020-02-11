@@ -2,7 +2,6 @@ import React from "react";
 //using moment js to deal with dates
 
 const ProjectSummary = ({ project }) => {
-  console.log(project.createAt.toDate());
   return (
     <div className="card project-summary z-depth-1">
       <div className="card-content grey-text text-darken-3">
