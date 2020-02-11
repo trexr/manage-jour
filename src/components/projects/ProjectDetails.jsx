@@ -5,14 +5,14 @@ import { compose } from "redux";
 import { Redirect } from "react-router-dom";
 
 const ProjectDetails = props => {
-  console.log("props2", props);
+  // console.log("props2", props);
   // onst {projectDetails} =  props
   const { project, auth } = props;
   if (!auth.uid) return <Redirect to="/signin" />;
   if (project) {
     return (
       <div className="container section project-details">
-        <div className="card z-depth-0">
+        <div className="card z-depth-1">
           <div className="card-content">
             <span className="card-title"> {project.title}</span>
             <p>{project.content}</p>
@@ -21,7 +21,9 @@ const ProjectDetails = props => {
             <div>
               Posted by {project.authorFirstName} {project.firstLastName}
             </div>
-            <div>2nd of feb, 2am</div>
+            <div>
+              Posted by {project.authorFirstName} {project.authorLastName}
+            </div>
           </div>
         </div>
       </div>

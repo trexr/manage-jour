@@ -13,8 +13,11 @@ class CreateProject extends Component {
   handleSubmit = e => {
     console.log(this.state);
     // createProject()
-    this.props.createProject(this.state);
     e.preventDefault();
+    this.props.createProject(this.state);
+
+    //Redirect to HP - have access to router info on props via Router component
+    this.props.history.push("/");
   };
   render() {
     const { auth } = this.props;
