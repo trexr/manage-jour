@@ -15,7 +15,11 @@ import {
   reduxFirestore,
   getFirestore
 } from "redux-firestore";
-import { ReactReduxFirebaseProvider, getFirebase } from "react-redux-firebase";
+import {
+  ReactReduxFirebaseProvider,
+  getFirebase,
+  isLoaded
+} from "react-redux-firebase";
 
 import "firebase/firestore";
 
@@ -35,6 +39,7 @@ const store = createStore(
 const rffProps = {
   firebase,
   useFirestoreForProfile: true,
+
   config: rrfConfig,
   dispatch: store.dispatch,
   createFirestoreInstance
@@ -49,7 +54,6 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-serviceWorker.unregister();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
